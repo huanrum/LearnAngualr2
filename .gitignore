@@ -9,6 +9,7 @@ build
 .vscode/
 
 node_modules/
+typings/
 build/
 */index.html
 */dev-server.js
