@@ -8,12 +8,7 @@ import childRoutes from './modules/_router'
 
 const appRoutes: Routes = [
     {
-        path:'',
-        redirectTo:'home',
-        pathMatch:'full'
-    },
-    {
-        path: 'home',
+        path: '',
         component: MainComponent,
         children: childRoutes
     },

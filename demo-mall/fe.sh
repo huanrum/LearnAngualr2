@@ -15,6 +15,11 @@ cp "$DIR/../webpack.config.js" "$DIR/webpack.config.js"
 echo -e "$GREENCOLOR copy webpack.config.js.$NOCOLOR"
 echo -e " "
 
+rm -rf "$DIR/../build/$NAME/assets/"
+cp -R "$DIR/assets/" "$DIR/../build/$NAME/assets/"
+echo -e "$GREENCOLOR copy assets.$NOCOLOR"
+echo -e " "
+
 echo -e "$REDCOLOR webpack webpack.config.js.$NOCOLOR"
 echo -e " "
 webpack webpack.config.js

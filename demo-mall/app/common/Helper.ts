@@ -11,6 +11,9 @@ class Helper{
         });
         return result;
     }
+    public navigate(){
+        
+    }
 }
 
 export default new Helper();

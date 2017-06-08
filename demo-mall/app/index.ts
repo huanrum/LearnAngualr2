@@ -19,6 +19,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule} from "@angular/router";
 import helper from "./common/Helper";
 import appRoutes from './_router';
+import appFilters from './_filter';
+import appComponents from './_component';
+import appDirectives from './_directive';
 
 // 为 AppComponent 组件类添加注解
 @Component({
@@ -29,7 +32,7 @@ class AppComponent {}
 
 @NgModule({
     imports: [ BrowserModule,RouterModule.forRoot(appRoutes)],
-    declarations: [ AppComponent,...helper.getComponent(appRoutes) ],
+    declarations: [ AppComponent,...helper.getComponent(appRoutes),...appComponents ],
     providers: [
         {provide: APP_BASE_HREF, useValue : '/' }
         { provide: LocationStrategy, useClass: HashLocationStrategy }

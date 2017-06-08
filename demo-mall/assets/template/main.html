@@ -1,0 +1,10 @@
+<div>
+    <div>
+        <ul>
+            <li *ng-for="let menu of menus">
+                <a [routerLinkActive]="menu.path">menu.path</a>
+            </li>
+        </ul>
+    </div>
+    <router-outlet></router-outlet>
+</div>
