@@ -1,0 +1,23 @@
+.modal-login{
+    position: absolute;
+    top:50%;
+    margin-left: 50%;
+    background:#d3d3d3;
+    transform: translate(-50%,-50%);
+}
+.modal-login .row{
+    margin: 0.5em 1em;
+    overflow: hidden;
+}
+
+.modal-login .row .label{
+    float: left;
+    width:40%;
+}
+.modal-login .row .input{
+    float: left;
+    width:60%;
+}
+.modal-login .row .input input{
+    width:98%;
+}

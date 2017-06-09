@@ -1,13 +1,11 @@
-import { Routes } from "@angular/router";
 
 //Book
 import { MathComponent } from "./book/Math";
 
-var childRoutes:Routes = [
+
+export default [
     {
-        path:'book.math',
+        path:'book/math',
         component:MathComponent
     }
 ];
-
-export default childRoutes;

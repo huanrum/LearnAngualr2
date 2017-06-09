@@ -8,11 +8,10 @@ import 'reflect-metadata';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import {APP_BASE_HREF,LocationStrategy, HashLocationStrategy} from '@angular/common';  
 
-// 引入NgModule装饰器
+// 引入NgModule装饰器,引入浏览器模块
 import { Component } from '@angular/core';
 import { NgModule } from '@angular/core';
-
-// 引入浏览器模块
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 // 引入组件AppComponent
@@ -31,10 +30,10 @@ import appDirectives from './_directive';
 class AppComponent {}
 
 @NgModule({
-    imports: [ BrowserModule,RouterModule.forRoot(appRoutes)],
+    imports: [ FormsModule,BrowserModule,RouterModule.forRoot(appRoutes)],
     declarations: [ AppComponent,...helper.getComponent(appRoutes),...appComponents ],
     providers: [
-        {provide: APP_BASE_HREF, useValue : '/' }
+        {provide: APP_BASE_HREF, useValue : '/' },
         { provide: LocationStrategy, useClass: HashLocationStrategy }
     ],
     bootstrap: [ AppComponent ]

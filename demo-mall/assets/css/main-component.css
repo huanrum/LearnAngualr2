@@ -1,0 +1,49 @@
+a{
+    color:#42b983;
+}
+
+.main-left{
+    position: fixed;
+    float: left;
+    width:16em;
+    background:#333333;
+    height: 100%;
+    border-right: 1px solid #999;
+    transition: all .5s ease 0s;
+}
+.main-right{
+    position: fixed;
+    float:right;
+    right:0.5em;
+    width:calc(100% - 18em);
+    height: 100%;
+    padding: 0.5em 1em;
+    transition: all .5s ease 0s;
+}
+
+.main-right .header{
+    position: relative;
+    z-index: 11;
+    height: 3em;
+    border-bottom: 1px solid #d3d3d3;
+}
+.main-right .header .user{
+    position: relative;
+    float: right;
+}
+.main-right .header .user .user-menu {
+    position: absolute;
+    float: right;
+    background: #333333;
+    right: 0;
+}
+.main-right .header .user .user-menu>*{
+    padding: 0.2em 1em;
+    white-space: nowrap;
+}
+.main-right .content{
+    height: calc(100% - 6em);
+}
+.main-right .footer{
+    height: 3em;
+}

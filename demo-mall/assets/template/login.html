@@ -1,16 +1,16 @@
-<div>
-    <div>
+<div class="modal-login">
+    <div class="row">
         <!--img src="" -->
     </div>
-    <div>
-        <div>Name</div>
-        <div><input type="text" [value]="name"></div>
+    <div class="row">
+        <div class="label">Name</div>
+        <div class="input"><input type="text" [(ngModel)]="name"></div>
     </div>
-    <div>
-        <div>Password</div>
-        <div><input type="text" [value]="password"></div>
+    <div class="row">
+        <div class="label">Password</div>
+        <div class="input"><input type="text" [(ngModel)]="password"></div>
     </div>
-    <div>
+    <div class="row">
         <button (click)="login()">Login</button>
     </div>
 </div>

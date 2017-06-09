@@ -1,10 +1,33 @@
 <div>
-    <div>
+    <div class="main-left">
         <ul>
-            <li *ng-for="let menu of menus">
-                <a [routerLinkActive]="menu.path">menu.path</a>
+            <li *ngFor="let menu of menus">
+                <a [href]="menu.path">{{menu.title}}</a>
+                <ul>
+                    <li *ngFor="let sub of menu.children">
+                        <a [href]="sub.path">{{sub.title}}</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
-    <router-outlet></router-outlet>
+    <div class="main-right">
+        <div class="header">
+            <div class="user" (mouseenter)="userShow=true" (mouseleave)="userShow=false">
+                <a>{{user}}</a> 
+                <div class="user-menu" [hidden]="!userShow">
+                    <div><a href="#/login" class="">登出</a></div> 
+                    <div><a href="#/about" class="">关于</a></div> 
+                    <div><a href="#/help" class="">帮助</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="footer">
+
+        </div>
+        
+    </div>
 </div>
