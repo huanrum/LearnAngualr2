@@ -1,3 +1,15 @@
 <div>
-    Grid
+    <style>
+        .position-relative{
+            position:relative;
+            height: 20em;
+        }
+    </style>
+    <h2>{{type}}</h2>
+    <div class="position-relative">
+         <common-form [title]="title" [entity]="entity" [actions]="{confirm:confirm}"></common-form>
+    </div>
+    <div  class="position-relative">
+        <common-grid [items]="items"></common-grid>
+    </div>
 </div>

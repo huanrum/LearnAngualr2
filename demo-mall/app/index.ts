@@ -11,6 +11,8 @@ import {APP_BASE_HREF,LocationStrategy, HashLocationStrategy} from '@angular/com
 // 引入NgModule装饰器,引入浏览器模块
 import { Component } from '@angular/core';
 import { NgModule } from '@angular/core';
+ 
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -30,7 +32,7 @@ import appDirectives from './_directive';
 class AppComponent {}
 
 @NgModule({
-    imports: [ FormsModule,BrowserModule,RouterModule.forRoot(appRoutes)],
+    imports: [ CommonModule,FormsModule,BrowserModule,RouterModule.forRoot(appRoutes)],
     declarations: [ AppComponent,...helper.getComponent(appRoutes),...appComponents ],
     providers: [
         {provide: APP_BASE_HREF, useValue : '/' },

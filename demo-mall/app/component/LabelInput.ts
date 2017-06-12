@@ -2,18 +2,34 @@ import { Component, OnChanges, SimpleChange, Input, ChangeDetectionStrategy } fr
 
 // 为 LoginComponent 组件类添加注解
 @Component({
-    selector:'label-input',
-    template:`<div>
+    selector: 'label-input',
+    template: `<div>
                 <div>{{name}}</div>
-                <div><input></div>
-            </div>`
+                <div><input  [(ngModel)]="entity[name]"></div>
+            </div>`,
+    styles: [
+        `div{
+            overflow: hidden;
+        }
+        div>div:first-child{
+            float: left;
+            width:40%;
+        }
+        div>div:last-child{
+            float: left;
+            width:60%;
+        }
+        div>div:last-child input{
+            width:98%;
+        }
+        `
+    ]
 })
 export class LabelInput {
-    constructor(name:String,value:String){
-        this.name = name;
-        this.value = value;
+    constructor() {
     }
     @Input()
-    name:String
-    value:String
+    name: String
+    @Input()
+    entity: any
 }
