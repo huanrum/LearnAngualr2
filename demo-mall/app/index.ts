@@ -35,7 +35,7 @@ class AppComponent {}
     imports: [ CommonModule,FormsModule,BrowserModule,RouterModule.forRoot(appRoutes)],
     declarations: [ AppComponent,...helper.getComponent(appRoutes),...appComponents ],
     providers: [
-        {provide: APP_BASE_HREF, useValue : '/' },
+        { provide: APP_BASE_HREF, useValue : '/' },
         { provide: LocationStrategy, useClass: HashLocationStrategy }
     ],
     bootstrap: [ AppComponent ]
